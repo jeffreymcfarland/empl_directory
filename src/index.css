@@ -1,5 +1,17 @@
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
 .navbar {
     color: #ffffff;
     background-color: #4682b4;
     border-bottom: solid 3px black;
+}
+
+.navbar-brand {
+    font-size: 25px;
+}
+
+.searchBar {
+    background-color: #f8f2ed;
 }
