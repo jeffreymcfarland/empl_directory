@@ -1,6 +1,8 @@
 import React from 'react';
+import TableEl from './TableEl';
 
-function Table() {
+function Table(props) {
+
     return(
 
         <div className='container-fluid mt-3'>
@@ -8,34 +10,24 @@ function Table() {
                 <thead className='thead-dark'>
                     <tr>
                     <th scope='col'>Image</th>
-                    <th scope='col'>Name</th>
-                    <th scope='col'>Phone</th>
-                    <th scope='col'>Email</th>
-                    <th scope='col'>DOB</th>
+                    <th scope='col'><button>Name</button></th>
+                    <th scope='col'><button>Phone</button></th>
+                    <th scope='col'><button>Email</button></th>
+                    <th scope='col'><button>DOB</button></th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope='row'>1</th>
-                        <td>Mark</td>
-                        <td>555-555-5555</td>
-                        <td>mark@email.com</td>
-                        <td>11-29-1974</td>
-                    </tr>
-                    <tr>
-                        <th scope='row'>1</th>
-                        <td>Mark</td>
-                        <td>555-555-5555</td>
-                        <td>mark@email.com</td>
-                        <td>11-29-1974</td>
-                    </tr>
-                    <tr>
-                        <th scope='row'>1</th>
-                        <td>Mark</td>
-                        <td>555-555-5555</td>
-                        <td>mark@email.com</td>
-                        <td>11-29-1974</td>
-                    </tr>
+                    {props.users.map(user => (
+                        <TableEl 
+                        image={user.image}
+                        name={user.name}
+                        phone={user.phone}
+                        email={user.email}
+                        dob={user.dob}
+                        key={user.name}
+                        />
+                    ))}
+                    
                 </tbody>
             </table>
         </div>
