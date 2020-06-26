@@ -1,1 +1,0 @@
-{"version":3,"sources":["index.css"],"names":[],"mappings":"AAAA,QACI,UAAc,CACd,wBAAyB,CACzB,4BACJ","file":"main.5e26faa4.chunk.css","sourcesContent":[".navbar {\n    color: #ffffff;\n    background-color: #4682b4;\n    border-bottom: solid 3px black;\n}"]}
