@@ -8,6 +8,7 @@ import moment from 'moment';
 function App() {
   const [search, setSearch] = useState("");
   const [users, setUsers] = useState([]);
+  const [ogUser, setOGUser] = useState([]);
 
   useEffect(() =>{
     API.getRandomEmployees()
@@ -35,19 +36,24 @@ function App() {
       }
 
       setUsers(userArr);
-      console.log(userArr)
+      setOGUser(userArr);
       
     });
   },[])
 
   const handleSubmit = e => {
     e.preventDefault();
+    setSearch(e.target.value);
     filterByName(search);
   };
 
   const filterByName = (search) => {
-    const newUsers = users.filter(user => user.name.includes(search));
+    if (search === "") {
+      setUsers(ogUser);
+    } else {
+      const newUsers = users.filter(user => user.name.toLowerCase().includes(search));
     setUsers(newUsers);
+    };
   }
 
   return (

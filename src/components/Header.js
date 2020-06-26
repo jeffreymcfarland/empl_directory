@@ -10,7 +10,7 @@ function Header() {
                     <span className='navbar-brand h1'>Employee Directory</span>
                 </li>
                 <li className='nav-item text-light mb-3'>
-                    <span className='h6'>Click to filter by heading or use the search bar to narrow your results.</span>
+                    <span className='h6'>Use the search bar to narrow your results by name.</span>
                 </li>
             </ul>
         </nav>

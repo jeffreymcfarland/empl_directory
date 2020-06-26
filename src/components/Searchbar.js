@@ -7,13 +7,13 @@ function Searchbar(prop) {
             <div className='row'>
                 <div className='col-4'></div>
                 <div className='col-4'>
-                    <form onSubmit={prop.handleSubmit}>
+                    <form>
                         <input 
                         className='form-control' 
                         type='text' 
                         placeholder='Search'
                         name='search'
-                        onChange={e => prop.setSearch(e.target.value)}
+                        onChange={prop.handleSubmit}
                         ></input>
                     </form>
                 </div>

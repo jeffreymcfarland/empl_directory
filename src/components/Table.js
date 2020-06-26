@@ -5,7 +5,7 @@ function Table(props) {
 
     return(
 
-        <div className='container-fluid mt-3'>
+        <div className='container-fluid mt-3 table-responsive-sm'>
             <table className='table table-striped'>
                 <thead className='thead-dark'>
                     <tr>
